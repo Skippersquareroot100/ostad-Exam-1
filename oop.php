@@ -44,20 +44,16 @@ class Member {
 
     public function borrowBook(Book $book): bool {
         if ($book->borrowBook()) {
-            echo $this->name . " borrowed " . $book->getTitle() . "\n";
             return true;
         } else {
-            echo $this->name . " could not borrow " . $book->getTitle() . " as no copies are available.\n";
-            return false;
+           return false;
         }
     }
 
     public function returnBook(Book $book): bool {
         if ($book->returnBook()) {
-            echo $this->name . " returned " . $book->getTitle() . "\n";
             return true;
         } else {
-            echo $this->name . " could not return " . $book->getTitle() . " as it was not borrowed.\n";
             return false;
         }
     }
