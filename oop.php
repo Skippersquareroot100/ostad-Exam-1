@@ -44,10 +44,8 @@ class Member {
 
     public function borrowBook(Book $book): bool {
         if ($book->borrowBook()) {
-            echo $this->name . " borrowed " . $book->getTitle() . "\n";
             return true;
         } else {
-            echo $this->name . " could not borrow " . $book->getTitle() . " as no copies are available.\n";
             return false;
         }
     }
