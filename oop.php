@@ -54,10 +54,8 @@ class Member {
 
     public function returnBook(Book $book): bool {
         if ($book->returnBook()) {
-            echo $this->name . " returned " . $book->getTitle() . "\n";
             return true;
         } else {
-            echo $this->name . " could not return " . $book->getTitle() . " as it was not borrowed.\n";
             return false;
         }
     }
